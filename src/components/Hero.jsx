@@ -19,9 +19,14 @@ export default function Hero() {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-tight">
-                    <BlurText text={COMPANY_INFO.name} delay={0.2} />
-                </h1>
+                {/* Title / Main Logo */}
+                <div className="w-full flex justify-center">
+                    <img
+                        src="/orbit-logo.png"
+                        alt="Orbit Space Club"
+                        className="w-3/4 md:w-full max-w-3xl h-auto object-contain drop-shadow-[0_0_25px_rgba(56,189,248,0.4)]"
+                    />
+                </div>
 
                 {/* Subtitle */}
                 <p className="text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed">

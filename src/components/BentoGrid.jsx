@@ -22,10 +22,10 @@ export default function BentoGrid() {
             </div>
 
             {/* The Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
+            <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 auto-rows-[200px]">
 
                 {/* Box 1: Large Feature (Span 2 cols, 2 rows) */}
-                <Box className="md:col-span-2 md:row-span-2 !p-0">
+                <Box className="col-span-1 md:col-span-2 row-span-1 md:row-span-2 !p-0">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
                     <img
                         src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
@@ -68,7 +68,7 @@ export default function BentoGrid() {
                 </Box>
 
                 {/* Box 4: ISRO News Feed (Wide) */}
-                <Box className="relative md:col-span-2 bg-gradient-to-r from-orange-900/20 to-amber-900/20 group hover:border-orange-500/30 transition-colors cursor-pointer">
+                <Box className="relative col-span-1 md:col-span-2 bg-gradient-to-r from-orange-900/20 to-amber-900/20 group hover:border-orange-500/30 transition-colors cursor-pointer">
 
                     {/* THE GHOST LINK: Covers the entire box area */}
                     <a
