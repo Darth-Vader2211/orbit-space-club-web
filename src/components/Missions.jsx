@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import { MISSIONS_DATA, MISSION_DEBRIEFS } from '../data';
 
 export default function Missions() {
     return (
         // Component wrapper with ID for potential anchor linking if needed
-        <div id="missions" className="py-24 max-w-7xl mx-auto px-6">
+        <section id="missions" className="py-24 max-w-7xl mx-auto px-6">
 
             {/* 1. UPCOMING / ACTIVE MISSIONS (The Main Log) */}
             <div className="mb-24">
@@ -19,18 +20,26 @@ export default function Missions() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {MISSIONS_DATA.map((mission) => (
-                        <div key={mission.id} className="group relative h-80 rounded-3xl overflow-hidden border border-white/10 bg-black/50 cursor-pointer">
-                            <img src={mission.image} alt={mission.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" />
+                        <Link
+                            key={mission.id}
+                            to={`/mission/${mission.slug}`}
+                            className="group relative h-80 rounded-3xl overflow-hidden border border-white/10 bg-black/50 cursor-pointer block"
+                        >
+                            <img
+                                src={mission.image}
+                                alt={mission.title}
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-100"
+                            />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                             <div className="absolute inset-0 p-8 flex flex-col justify-end items-start">
                                 <div className="flex gap-3 mb-4">
                                     <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold tracking-widest uppercase border border-blue-500/20">{mission.category}</span>
                                     <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold tracking-widest uppercase border border-amber-500/20">{mission.status}</span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-2">{mission.title}</h3>
+                                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-200 transition-colors">{mission.title}</h3>
                                 <p className="text-gray-300 text-sm leading-relaxed max-w-md">{mission.description}</p>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -76,7 +85,8 @@ export default function Missions() {
                                     {debrief.images.map((img, i) => (
                                         <div
                                             key={i}
-                                            className={`relative rounded-xl overflow-hidden border border-white/10 bg-white/5 group ${i === 0 ? 'sm:col-span-2 sm:h-64' : 'h-48'}`}
+                                            // --- FIX IS HERE: Changed height to h-[600px] for the main image ---
+                                            className={`relative rounded-xl overflow-hidden border border-white/10 bg-white/5 group ${i === 0 ? 'sm:col-span-2 h-[600px]' : 'h-48'}`}
                                         >
                                             <img
                                                 src={img}
@@ -96,6 +106,6 @@ export default function Missions() {
 
             </div>
 
-        </div>
+        </section>
     );
 }

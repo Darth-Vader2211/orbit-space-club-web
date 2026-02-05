@@ -10,6 +10,8 @@ import Crew from './components/Crew';
 import Join from './components/Join';
 import BentoGrid from './components/BentoGrid';
 
+import MissionDetail from './components/MissionDetail'; // Import the new component
+
 export default function App() {
   return (
     // CONTAINER: switched to min-h-screen and flex-col for sticky footer layout
@@ -49,6 +51,7 @@ export default function App() {
 
           {/* OTHER PAGES */}
           <Route path="/missions" element={<Missions />} />
+          <Route path="/mission/:slug" element={<MissionDetail />} />
           <Route path="/crew" element={<Crew />} />
           <Route path="/join" element={<Join />} />
         </Routes>
