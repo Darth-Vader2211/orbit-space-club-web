@@ -9,7 +9,7 @@ export const COMPANY_INFO = {
 
 export const HERO_STATS = [
     { label: "MEMBERS", value: "20+" },
-    { label: "EVENTS", value: "1" },
+    { label: "EVENTS HELD", value: "1" },
     { label: "PARTNERS", value: "1" },
     { label: "POSSIBILITIES", value: "∞" }
 ];
