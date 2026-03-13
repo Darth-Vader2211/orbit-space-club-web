@@ -62,3 +62,33 @@ export const MISSION_DEBRIEFS = [
         ]
     }
 ];
+
+export const CREW_DATA = [
+    { id: 1, name: "Parth Mehatre", division: "Documentation" },
+    { id: 2, name: "Divyashree Gurav", division: "Documentation" },
+    { id: 3, name: "Prathamesh Nalawade", division: "PR & Outreach" },
+    { id: 4, name: "Aditi Patil", division: "PR & Outreach" },
+    { id: 5, name: "Hardik Gujar", division: "PR & Outreach" },
+    { id: 6, name: "Iqra Hakim", division: "Logistics" },
+    { id: 7, name: "Nikhil Jadhav", division: "Logistics" },
+    { id: 8, name: "Pranoti Firagannavar", division: "Logistics" },
+    { id: 9, name: "Shreeja Satpute", division: "Logistics" },
+    { id: 10, name: "Aditya Dabholkar", division: "Logistics" },
+    { id: 11, name: "Satej Salokhe", division: "Logistics" },
+    { id: 12, name: "Atharva Kate", division: "Research & Development" },
+    { id: 13, name: "Yash Joshi", division: "Research & Development" },
+    { id: 14, name: "Sakshi Patil", division: "Research & Development" },
+    { id: 15, name: "Soukhya Patil", division: "Research & Development" },
+    { id: 16, name: "Suyash Hirekerur", division: "Content Development" },
+    { id: 17, name: "Shravani Chavan", division: "Content Development" },
+    { id: 18, name: "Shravani Chandekar", division: "Content Development" },
+    { id: 19, name: "Krishnalee", division: "Media & Design" },
+    { id: 20, name: "Pratik Suryawanshi", division: "Media & Design" },
+    { id: 21, name: "Kirti Gharge", division: "Media & Design" },
+    { id: 22, name: "Anaya Jadhav", division: "Logistics" },
+    { id: 23, name: "Ayush Karnewar", division: "Founding Member", isFounder: true },
+    { id: 24, name: "Ritvik Kanojia", division: "Founding Member", isFounder: true },
+    { id: 25, name: "Saniya Sayyad", division: "Founding Member", isFounder: true },
+    { id: 26, name: "Sanskriti Gawade", division: "Founding Member", isFounder: true },
+];
+
