@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BlurText from './BlurText';
 import { HERO_STATS, COMPANY_INFO } from '../data';
 
@@ -31,12 +32,12 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-2">
-                    <button className="px-8 py-3 bg-white text-black text-base font-bold rounded-lg hover:scale-105 transition-transform duration-200">
+                    <Link to="/join" className="px-8 py-3 bg-white text-black text-base font-bold rounded-lg hover:scale-105 transition-transform duration-200">
                         Start Journey
-                    </button>
-                    <button className="px-8 py-3 bg-transparent border border-white/20 text-white text-base font-bold rounded-lg hover:bg-white/10 transition-colors">
+                    </Link>
+                    <Link to="/missions" className="px-8 py-3 bg-transparent border border-white/20 text-white text-base font-bold rounded-lg hover:bg-white/10 transition-colors">
                         View Missions
-                    </button>
+                    </Link>
                 </div>
             </div>
 
