@@ -49,6 +49,7 @@ export default function BentoGrid() {
                     <div>
                         <h4 className="text-xl font-bold text-white">ORBIT CREW</h4>
                         <p className="text-sm text-gray-400 mt-1">20+ Active Operatives</p>
+                        <Link to="/crew" className="text-sm text-gray-400 mt-1">View Crew</Link>
                     </div>
                 </Box>
 
